@@ -45,9 +45,10 @@ CreditCardNumber int primary key not null,
 CreditCardExpiry date not null,
 CreditCardCVV int not null
 )
+--drop table ModeOfTransaction
 Create table ModeOfTransaction
 (	
-UserID int primary key not null,
+ModeID int primary key not null,
 Modes	int not null,
 MaturityInstruction varchar
 )
@@ -59,6 +60,6 @@ Name varchar not null,
 Nickname varchar,
 Transactionamount	money,
 TransactionDate	date,
-ModeofTransaction int not null,
+ModeID int not null,
 Remark	varchar
 )
