@@ -1,0 +1,141 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
+<div class="container">
+<div class="row">
+    <div class="col-lg-2 mb-4">
+        <!-- Billing card 2-->
+        <div class="card h-100 border-start-lg border-start-secondary">
+            <div class="card-body">
+                <div>Welcome Back,</div>
+                &nbsp;
+                <h4>{{Account?.firstName}} </h4>      
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 mb-4">
+        <!-- Billing card 1-->
+        <div class="card h-100 border-start-lg border-start-primary">
+            <div class="card-body">
+                <div >Current Balance</div> &nbsp;
+                <h3>{{Cred?.accountBalance}} </h3>INR
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 mb-3">
+     
+        <div class="card h-80 border-start-lg border-start-primary">
+            <div class="card-body">
+                <div >Quick Links</div> &nbsp;
+                <div>
+               <a routerLink="/user/transaction/mode" > <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAAz0lEQVRIie3WsUqCURQH8J/okriEKPoKQdDSkouP0Ms4h99WT1FTQ4MNjk4ftDUl2jNEkyI4uDiYhCAE0XcupP/pLPf+DpcD55YVl3ucIy/Q2JsrzJFFw1t8httU+Bx3h41XcI1mED5AD6sShmgFwSc4wzTIA1WM8I72ES0SjZqjNCg84g2NSBQuUf/NwVNc/G0vP6dh80wPKdActX+NNlOh44NAS5j4XlXLIPejgucv+BUvQfDntsiwQDcI3kn/iKfAM5uvaCcFfoOnoi5fA/PgM+1OaQn7AAAAAElFTkSuQmCC"/></a> &nbsp;&nbsp;&nbsp;&nbsp;
+               <a routerLink="/user/profile" ><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAABmUlEQVRIidXWz0qVQRjH8c+ROCbVIs2WpaSXEEpdQrSptZCYf6iNG88NiEHegRshwUuobQRBmOlKRHERVAsrVCij0oUtZg7I4fg673Gg+sLAyzy/Z37vwDwzD3+JSot57eiN3+/xO8/vnMx1LOAHjuLYxzNcK7NQWwntIFbQhTu4GMdddGMVA2XMU7iCz3hyQryCp9hGZ07jGSwpPhMVLGM6p/E6HiboxrCW0/gnbiXobkftqaQervPSSuZX1GYzzs4/b3yIaoKuioOcxh9wI0HXF7XZjF9gKEE3hOeJaybRi+8YKdCM4Rt6chrDfaFcmpmPxNi93KZ15jHXZH4uxpIpW06HLcbObHzaI5GdcxjGHkabxMexiwdRe2YuoybU5lfh5DbbWQWPsRO1tZhbmiqmhB1uYAIdCXkX8AibMbcm7cZD6CBe4pNwIbRyn7fF3I94JbRLhbTjHd7gaguGjXTjtdCPFT6Xk/gi9Fi56IprThaJljGb0bTOLN4en2g8oftRsJXZuB83cak+0Vhzi5kN62zJv5n/jD/ea0iDms86/gAAAABJRU5ErkJggg=="/></a>&nbsp;&nbsp;&nbsp;&nbsp;
+               <a routerLink="/user/payee" > <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAACZElEQVRIie3VS4iOYRQH8N/HUITRSCQit2RDTIosXBeKnVtMuaZZWmGhxMbOlCQWspBsbMZtIbKR0ohSNu4kC9dB7pexOM/oncc333yaIcq/vr63/3v+5/885zzvefiPvxhTsBc38ArH/oTpTnzCaTRiLT7jJBb/LtPNaMWcjJ+NXXiHjd01KWE1LuAprouyrqygWZcWdjn9v8DwXzHtJfr2CnuwAg/TAnpV0PVJmkNYiit4j6a0kS6xMZmMK3CNaKlCexUb0nONaMMzrMkDy+1gOfbhToF7gaFVGA/E6/T8BRdxQLStS+M63My4FozWsQo5JmK86HERdzGmGuNbmJRxM/BI9LozPBBlzbUjca8a4/4YkHGvUYt+FYyHYDBeZvxA8a13adwXgzLuLM7jRAXj0zglTnMRtehdQfcDM/EB9Rk/CV8xrIxmDL5hRMZPFZNuVjXGcAb7y/BXcLgMf0Sc4BxNolJVY47YQW3Gz098cSCUEjc3iy3hI5aUM+hsEj1OwvxQvBXfZ1uBa0vc+yy2PeZ5tcZ12C4+qzzZvE4SPffzjonW7BAzoFOMx0Gxq6uYnPhSStosbqClZbTL0rvmFNveilE4JypyHNNz4TZR1jNYmIQ14r69kZIexoQKC5+QYt4lzZqUA6aJA/gZu9sXtgpvsKiQZJQYfU+wRZS/WtRha9JeTrnaMUvM/fWl9LJFXIHEAGnGbTHcW3/BtIjBOCoq0SBmAHH71RMnuC373Rejs7von3Ll+e/VYKyOM/hEWl1DDxgTl8dtLCiSNWI8fihw10QvNvWQMVzqwVz/8Y/gOyrIkd/dx12/AAAAAElFTkSuQmCC"/></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a routerLink="/user/summary" ><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAA/0lEQVRIieXXrU4EMRRA4Q9CSHiU1YtdReApSAgGLODgJdCs5S1Arl3EqklweDwSBA1i6NAfCjvJHteb5p5pe28nZU1sRWL3mFTkesBN7uSdSGyCDosC6TGusYfLWrEgnReIp9jFaRgn5dsFyVOscIAT3Iof4xdDK67lCYd4DOMrvP+HOFv+F+IseUvxDHe92DMu8KbXaq2KayHefqsQP8pJssRZow8Sci37wZbtVMTaxLnF9W2rEuy3Epdcn1mMXjzNmPOKl9binDOe47y1+Mc/TQ2jb6f+HZwiueWjX3F20eSyeXf15omHimvW0BHNFRN3Pl8TNc+YIbqGuX7HB4mYJsUS4UYaAAAAAElFTkSuQmCC"/></a>&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div class="col-md-20 ">
+    <div class="row ">
+        <div class="col-xl-4 col-lg-20 mb-4">
+            <div class="card h-100 l-bg-cherry">
+                <div class="card-statistic-3 p-4">
+                    <div class="card-icon card-icon-large"><i class="fas fa-dollar-sign"></i></div>
+                    <div class="mb-4">
+                        <h5 class="card-title mb-0">HDFC Bank</h5>
+                        &nbsp;
+                        &nbsp;
+                        &nbsp;
+                        &nbsp;
+                        &nbsp;
+                        &nbsp;
+                        <h5 class="card-title mb-0">Debit Card</h5>
+                    </div>
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    <div class="row align-items-center mb-2 d-flex">
+                        <div class="col-xl-12">
+                            {{Cred?.debitCardNumber}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-20 mb-4">
+            <div class="card h-100 l-bg-blue-dark">
+                <div class="card-statistic-3 p-4">
+                    <div class="card-icon card-icon-large"><i class="fas fa-shopping-cart"></i></div>
+                    <div class="mb-4">
+                        <h5 class="card-title mb-0">HDFC Bank</h5>
+                        &nbsp;
+                        &nbsp;
+                        &nbsp;
+                        &nbsp;
+                        &nbsp;
+                        &nbsp;
+                        <h5 class="card-title mb-0">Credit Card</h5>
+                    </div>
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    <div class="row align-items-center mb-2 d-flex">
+                        <div class="col-xl-12">
+                            {{Cred?.creditCardNumber}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Billing history card-->
+<div class="card mb-4">
+    <div class="card-header">Billing History</div>
+    <div class="card-body p-0">
+        <!-- Billing history table-->
+        <div class="table-responsive table-billing-history">
+            <table class="table mb-0">
+                <thead>
+                    <tr class="align-self-center">
+                        <th>Reference ID</th>
+                       
+                        <th>Bank Name</th>
+                        <th>Payment Type</th>
+                        <th>Paid Date</th>
+                        <th>Amount</th>
+                          <th>Status</th>
+                         
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let d of data"  >
+                        <td>{{d.transactionReferenceId}}</td>
+                        
+                        <td>HDFC Bank</td>
+                        <div *ngIf="d.modeId == 1; else content"><td >IMPS</td></div>
+                        <ng-template #content> 
+                            <ng-container *ngIf="d.modeId == 2;else third"><td >NEFT</td> </ng-container></ng-template>
+                            <ng-template #third><td >RTGS</td> </ng-template>
+
+                        <td>{{d.transactionDate}}</td> 
+                        <td>{{d.transactionamount}}</td>
+                        <td>{{d.paymentStatus}}</td>
+                        <!-- <td><button (click)="navigateverify(d.transactionReferenceId)" class="btn btn-primary"> Pay Now</button> </td> -->
+                    </tr>
+                    
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

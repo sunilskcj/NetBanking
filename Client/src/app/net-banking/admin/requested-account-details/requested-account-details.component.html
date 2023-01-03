@@ -1,0 +1,70 @@
+<br>
+<div class="accordion" id="accordionPayment">
+    <div class="accordion-item mb-3">
+        <div class="container"><br>
+            <div>
+                <h3>Customer Profile</h3><br>
+                <div>
+                    <label class="form-label">First Name - {{Account?.firstName}}</label>
+                </div> 
+                <br>
+                <div>
+                    <label class="form-label">Middle Name - {{Account?.middleName}}</label>
+                </div>
+                <br>
+                <div>
+                    <label class="form-label">Last Name - {{Account?.lastName}}</label> 
+                </div>
+                <br>
+                <div>
+                    <label class="form-label">Mobile Number - {{Account?.mobileno}}</label>
+                </div>
+                <br>
+                <div>
+                    <label class="form-label">Aadhar Card Number -{{Account?.aadhaarCardNumber}}</label>
+                </div>
+                <br>
+                <div>
+                    <label class="form-label">Date of Birth - {{Account?.dob}}</label>
+                </div>
+                <br>
+                <div>
+                    <label class="form-label">emailId - {{Account?.emailId}}</label>
+                </div> <br>
+                <div>
+                    <label class="form-label">Residential Address  - {{Account?.residentialAddressLine1}}</label>
+                </div> <br>
+                <div>
+                    <label class="form-label">Residential State - {{Account?.residentialState}}</label>
+                </div> <br>
+                <div>
+                    <label class="form-label">Residential City - {{Account?.residentialCity}}</label>
+                </div> <br>
+                <div>
+                    <label class="form-label">Residential Pincode - {{Account?.residentialPincode}}</label>
+                </div> <br>
+                <div>
+                    <label class="form-label">Occupation details- {{Account?.occupationdetails}}</label>
+                </div> <br>
+                <div>
+                    <label class="form-label">Occupation Type - {{Account?.occupationType}}</label>
+                </div> <br>
+                <div>
+                    <label class="form-label">Gross Annual Income - {{Account?.grossAnnualIncome}}</label>
+                </div> <br>
+                <br>
+        <div>
+            <div [hidden]="!errorMessage" class="alert alert-warning" role="alert">
+                Add all required fields
+               </div>
+               <div>
+               <div [hidden]="!succes" class="alert alert-primary" role="alert">
+                 {{succes}}
+                </div>
+            <button class="btn btn-primary w-20 mt-2" (click)="approve()" >Approve</button> &nbsp;
+            <button class="btn btn-danger w-20 mt-2" (click)="deny()" >Deny</button>
+        </div><br>
+        </div>
+    </div>
+</div>
+
