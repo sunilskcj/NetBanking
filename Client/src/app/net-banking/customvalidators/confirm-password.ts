@@ -8,7 +8,7 @@ export function ConfirmedValidator(controlName: string, matchingControlName: str
             return;
         }
         if (control.value !== matchingControl.value) {
-            matchingControl.setErrors({ confirmedValidator: true});
+            matchingControl.setErrors({ confirmedValidator: false});
         } else {
             matchingControl.setErrors(null);
         }
